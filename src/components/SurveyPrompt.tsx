@@ -8,7 +8,7 @@ export const SurveyPrompt = () => {
 
   const handleNo = () => {
     setIsOpen(false);
-    toast.success("Thank you for your visit!", {
+    toast.success("Thank you! We are getting the best options for you!", {
       position: "top-center",
       duration: 3000,
     });

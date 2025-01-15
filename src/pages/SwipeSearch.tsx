@@ -94,7 +94,7 @@ const SwipeSearch = () => {
             className="w-full py-4 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center space-x-2 font-semibold"
           >
             <PlaneLanding size={24} />
-            <span>To my next holiday!</span>
+            <span>See your next holiday!</span>
           </button>
         </div>
       </div>
