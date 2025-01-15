@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Heart, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Heart, X, PlaneLanding } from 'lucide-react';
+import { useRouter } from 'next/router';
 
 const topics = [
   {
@@ -35,6 +36,7 @@ const topics = [
 ];
 
 const SwipeSearch = () => {
+  const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [likedTopics, setLikedTopics] = useState([]);
   const [animation, setAnimation] = useState('');
@@ -60,13 +62,21 @@ const SwipeSearch = () => {
     }
   };
 
+  const handleNavigateToRecommendations = () => {
+    toast.success("Thank you for completing our survey!", {
+      position: "top-center",
+      duration: 3000,
+    });
+    setTimeout(() => navigate('/recommendations'), 3000);
+  };
+
   if (currentIndex >= topics.length) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
         <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
           <h2 className="text-2xl font-bold text-center mb-6">Your Travel Preferences</h2>
           {likedTopics.length > 0 ? (
-            <div className="space-y-4">
+            <div className="space-y-4 mb-8">
               {likedTopics.map(topic => (
                 <div key={topic.id} className="flex items-center space-x-2 text-orange-500">
                   <Heart size={20} className="fill-current" />
@@ -75,8 +85,16 @@ const SwipeSearch = () => {
               ))}
             </div>
           ) : (
-            <p className="text-center text-gray-500">No preferences selected</p>
+            <p className="text-center text-gray-500 mb-8">No preferences selected</p>
           )}
+          
+          <button
+            onClick={handleNavigateToRecommendations}
+            className="w-full py-4 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors flex items-center justify-center space-x-2 font-semibold"
+          >
+            <PlaneLanding size={24} />
+            <span>To my next holiday!</span>
+          </button>
         </div>
       </div>
     );
