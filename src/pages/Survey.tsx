@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { SliderQuestion } from '../components/SliderQuestion';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
-import { Progress } from '@/components/ui/progress';
 
 const questions = [
   "How satisfied are you with our service?",
@@ -27,29 +26,17 @@ const Survey = () => {
     setAnswers(newAnswers);
   };
 
-  const calculateProgress = () => {
-    const answeredQuestions = answers.filter(answer => answer !== 5).length;
-    return (answeredQuestions / questions.length) * 100;
-  };
-
   const handleSubmit = () => {
     toast.success("Thank you for completing our survey!", {
       position: "top-center",
       duration: 3000,
     });
-    setTimeout(() => navigate('/'), 3000);
+    setTimeout(() => navigate('/recommendations'), 3000);
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white p-6">
       <div className="max-w-2xl mx-auto">
-        <div className="mb-8">
-          <Progress value={calculateProgress()} className="h-2" />
-          <p className="text-right text-sm text-gray-500 mt-2">
-            {Math.round(calculateProgress())}% Complete
-          </p>
-        </div>
-
         <div className="space-y-6">
           {questions.map((question, index) => (
             <SliderQuestion
