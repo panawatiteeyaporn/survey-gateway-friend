@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { SliderQuestion } from '../components/SliderQuestion';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
+import { Progress } from '@/components/ui/progress';
 
 const questions = [
   "How satisfied are you with our service?",
@@ -19,12 +20,16 @@ const questions = [
 const Survey = () => {
   const navigate = useNavigate();
   const [answers, setAnswers] = useState<number[]>(new Array(10).fill(5));
-  const [currentQuestion, setCurrentQuestion] = useState(0);
 
   const handleAnswer = (index: number, value: number) => {
     const newAnswers = [...answers];
     newAnswers[index] = value;
     setAnswers(newAnswers);
+  };
+
+  const calculateProgress = () => {
+    const answeredQuestions = answers.filter(answer => answer !== 5).length;
+    return (answeredQuestions / questions.length) * 100;
   };
 
   const handleSubmit = () => {
@@ -39,57 +44,30 @@ const Survey = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white p-6">
       <div className="max-w-2xl mx-auto">
         <div className="mb-8">
-          <div className="h-2 bg-gray-200 rounded-full">
-            <div
-              className="h-2 bg-primary rounded-full transition-all duration-300"
-              style={{
-                width: `${((currentQuestion + 1) / questions.length) * 100}%`,
-              }}
-            />
-          </div>
+          <Progress value={calculateProgress()} className="h-2" />
           <p className="text-right text-sm text-gray-500 mt-2">
-            Question {currentQuestion + 1} of {questions.length}
+            {Math.round(calculateProgress())}% Complete
           </p>
         </div>
 
         <div className="space-y-6">
           {questions.map((question, index) => (
-            <div
+            <SliderQuestion
               key={index}
-              className={`transition-all duration-300 ${
-                index === currentQuestion ? 'opacity-100' : 'hidden'
-              }`}
-            >
-              <SliderQuestion
-                question={question}
-                value={answers[index]}
-                onChange={(value) => handleAnswer(index, value)}
-              />
-              
-              <div className="flex justify-between mt-6">
-                <button
-                  onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
-                  className={`px-6 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors ${
-                    currentQuestion === 0 ? 'invisible' : ''
-                  }`}
-                >
-                  Previous
-                </button>
-                <button
-                  onClick={() => {
-                    if (currentQuestion === questions.length - 1) {
-                      handleSubmit();
-                    } else {
-                      setCurrentQuestion(currentQuestion + 1);
-                    }
-                  }}
-                  className="px-6 py-2 rounded-lg bg-primary text-white hover:bg-primary-dark transition-colors"
-                >
-                  {currentQuestion === questions.length - 1 ? 'Submit' : 'Next'}
-                </button>
-              </div>
-            </div>
+              question={question}
+              value={answers[index]}
+              onChange={(value) => handleAnswer(index, value)}
+            />
           ))}
+          
+          <div className="flex justify-center mt-8 mb-12">
+            <button
+              onClick={handleSubmit}
+              className="px-8 py-3 rounded-lg bg-primary text-white hover:bg-primary-dark transition-colors text-lg font-medium"
+            >
+              Submit Survey
+            </button>
+          </div>
         </div>
       </div>
     </div>
