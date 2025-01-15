@@ -10,7 +10,7 @@ export const SliderQuestion = ({ question, value, onChange }: SliderQuestionProp
   const [isDragging, setIsDragging] = useState(false);
 
   return (
-    <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 mb-6 shadow-sm animate-fade-in">
+    <div className="bg-white rounded-xl p-6 mb-6 shadow-sm animate-fade-in">
       <h3 className="text-xl font-medium text-secondary-dark mb-6">{question}</h3>
       <div className="relative">
         <input
@@ -23,11 +23,11 @@ export const SliderQuestion = ({ question, value, onChange }: SliderQuestionProp
           onMouseUp={() => setIsDragging(false)}
           onTouchStart={() => setIsDragging(true)}
           onTouchEnd={() => setIsDragging(false)}
-          className="w-full h-2 bg-secondary rounded-lg appearance-none cursor-pointer"
+          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
           style={{
-            background: `linear-gradient(to right, #9b87f5 0%, #9b87f5 ${
+            background: `linear-gradient(to right, #FF6B00 0%, #FF6B00 ${
               ((value - 1) / 9) * 100
-            }%, #F1F0FB ${((value - 1) / 9) * 100}%, #F1F0FB 100%)`,
+            }%, #E5E7EB ${((value - 1) / 9) * 100}%, #E5E7EB 100%)`,
           }}
         />
         <div

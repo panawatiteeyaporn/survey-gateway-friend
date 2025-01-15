@@ -25,13 +25,14 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#9b87f5",
-          light: "#D6BCFA",
-          dark: "#7E69AB",
+          DEFAULT: "#FF6B00", // EasyJet orange
+          light: "#FF8533",
+          dark: "#CC5500",
         },
         secondary: {
-          DEFAULT: "#F1F0FB",
-          dark: "#222222",
+          DEFAULT: "#003C71", // EasyJet blue
+          light: "#004E94",
+          dark: "#002A4E",
         },
       },
       keyframes: {

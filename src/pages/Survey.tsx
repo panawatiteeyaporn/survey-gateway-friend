@@ -36,10 +36,10 @@ const Survey = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-secondary to-white p-6">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white p-6">
       <div className="max-w-2xl mx-auto">
         <div className="mb-8">
-          <div className="h-2 bg-secondary rounded-full">
+          <div className="h-2 bg-gray-200 rounded-full">
             <div
               className="h-2 bg-primary rounded-full transition-all duration-300"
               style={{
@@ -69,7 +69,7 @@ const Survey = () => {
               <div className="flex justify-between mt-6">
                 <button
                   onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
-                  className={`px-6 py-2 rounded-lg bg-secondary hover:bg-secondary/80 text-secondary-dark transition-colors ${
+                  className={`px-6 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors ${
                     currentQuestion === 0 ? 'invisible' : ''
                   }`}
                 >
