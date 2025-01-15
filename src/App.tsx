@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Survey from "./pages/Survey";
 import Recommendations from "./pages/Recommendations";
+import SwipeSearch  from "./pages/SwipeSearch";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/survey" element={<Survey />} />
           <Route path="/recommendations" element={<Recommendations />} />
+          <Route path="/swipe" element={<SwipeSearch />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
