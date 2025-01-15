@@ -42,7 +42,15 @@ const Index = () => {
               variant="outline"
               className="w-full sm:w-auto border-primary text-primary hover:bg-primary/10"
             >
-              Give feedback
+              Improve my holiday
+            </Button>
+            </Button>
+            <Button
+              onClick={() => navigate('/swipe')}
+              variant="outline"
+              className="w-full sm:w-auto border-primary text-primary hover:bg-primary/10"
+            >
+              Give me something new
             </Button>
           </div>
         </div>
