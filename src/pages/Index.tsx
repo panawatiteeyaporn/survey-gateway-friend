@@ -25,7 +25,7 @@ const Index = () => {
               Enjoy your holiday?
             </h1>
             <p className="text-lg md:text-xl text-gray-600">
-              Give us your feedback to see your next unbeatable holiday prices
+              Give us your feedback to see your next unbeatable holiday prices.
             </p>
           </div>
 
