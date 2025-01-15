@@ -8,12 +8,6 @@ const questions = [
   "How likely are you to recommend us to others?",
   "How would you rate our website's ease of use?",
   "How satisfied are you with our customer support?",
-  "How would you rate the value for money of our services?",
-  "How clear was our communication with you?",
-  "How well did we meet your expectations?",
-  "How satisfied are you with our booking process?",
-  "How would you rate our response time?",
-  "How likely are you to use our services again?",
 ];
 
 const Survey = () => {
