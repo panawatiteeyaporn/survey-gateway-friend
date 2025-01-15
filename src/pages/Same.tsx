@@ -15,36 +15,15 @@ const destinations: Destination[] = [
     image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e",
     description: "Discover the magic of white-washed buildings and stunning sunsets",
     price: "From £299pp",
-  },
-  {
-    id: 2,
-    name: "Algarve, Portugal",
-    image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21",
-    description: "Beautiful beaches and world-class golf resorts",
-    price: "From £199pp",
-  },
-  {
-    id: 3,
-    name: "Mallorca, Spain",
-    image: "https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151",
-    description: "Crystal clear waters and Mediterranean charm",
-    price: "From £249pp",
-  },
-  {
-    id: 4,
-    name: "Antalya, Turkey",
-    image: "https://images.unsplash.com/photo-1523712999610-f77fbcfc3843",
-    description: "Ancient ruins meet modern luxury",
-    price: "From £329pp",
-  },
+  }
 ];
 
-const Recommendations = () => {
+const Same = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-secondary/5 to-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-secondary mb-2 text-center">Your Next Holiday Awaits</h1>
-        <p className="text-xl text-gray-600 mb-12 text-center">Based on your preferences and your travel history, we've selected these amazing destinations</p>
+        <p className="text-xl text-gray-600 mb-12 text-center">Based on your preferences, we've selected these amazing destinations</p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {destinations.map((destination) => (
@@ -84,4 +63,4 @@ const Recommendations = () => {
   );
 };
 
-export default Recommendations;
+export default Same;

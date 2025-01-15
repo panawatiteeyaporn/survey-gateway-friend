@@ -21,7 +21,7 @@ const Survey = () => {
   };
 
   const handleSubmit = () => {
-    toast.success("Thank you for completing our survey!", {
+    toast.success("Thank you! We are getting the best options for you!", {
       position: "top-center",
       duration: 3000,
     });
@@ -46,7 +46,7 @@ const Survey = () => {
               onClick={handleSubmit}
               className="px-8 py-3 rounded-lg bg-primary text-white hover:bg-primary-dark transition-colors text-lg font-medium"
             >
-              Submit Survey
+              Update my preferences
             </button>
           </div>
         </div>

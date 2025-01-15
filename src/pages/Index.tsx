@@ -10,7 +10,7 @@ const Index = () => {
       <header className="w-full bg-white border-b border-gray-200 py-4 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
           <img 
-            src="https://holidays.easyjet.com/images/easyjet-holidays-logo.svg" 
+            src="/ejh-logo.jpeg" 
             alt="EasyJet Holidays" 
             className="h-8 md:h-10"
           />
@@ -25,13 +25,13 @@ const Index = () => {
               Enjoy your holiday?
             </h1>
             <p className="text-lg md:text-xl text-gray-600">
-              Give us your feedback to see your next unbeatable holiday prices.
+              Give us your feedback to see your next unbeatable holiday prices
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
-              onClick={() => navigate('/recommendations')}
+              onClick={() => navigate('/same')}
               variant="default"
               className="w-full sm:w-auto bg-primary hover:bg-primary-dark text-white"
             >

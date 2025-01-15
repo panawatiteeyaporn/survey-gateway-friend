@@ -64,7 +64,7 @@ const SwipeSearch = () => {
   };
 
   const handleNavigateToRecommendations = () => {
-    toast.success("Thank you for completing our survey!", {
+    toast.success("Thank you! We are getting the best options for you!", {
       position: "top-center",
       duration: 3000,
     });

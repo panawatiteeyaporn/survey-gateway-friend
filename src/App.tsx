@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Survey from "./pages/Survey";
 import Recommendations from "./pages/Recommendations";
 import SwipeSearch  from "./pages/SwipeSearch";
+import Same  from "./pages/Same";
 
 const queryClient = new QueryClient();
 
@@ -19,8 +20,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/survey" element={<Survey />} />
-          <Route path="/recommendations" element={<Recommendations />} />
+          <Route path="/same" element={<Same />} />
           <Route path="/swipe" element={<SwipeSearch />} />
+          <Route path="/recommendations" element={<Recommendations />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
