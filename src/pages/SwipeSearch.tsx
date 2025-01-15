@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Heart, X, PlaneLanding } from 'lucide-react';
-import { useRouter } from 'next/router';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'sonner';
 
 const topics = [
   {
@@ -36,7 +37,7 @@ const topics = [
 ];
 
 const SwipeSearch = () => {
-  const router = useRouter();
+  const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [likedTopics, setLikedTopics] = useState([]);
   const [animation, setAnimation] = useState('');
