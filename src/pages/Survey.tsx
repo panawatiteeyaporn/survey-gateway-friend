@@ -4,10 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 
 const questions = [
-  "How satisfied are you with our service?",
-  "How likely are you to recommend us to others?",
-  "How would you rate our website's ease of use?",
-  "How satisfied are you with our customer support?",
+  "City or seaside?",
+  "More activities or more relaxation?",
+  "No frills or luxury?",
 ];
 
 const Survey = () => {

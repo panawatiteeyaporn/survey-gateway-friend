@@ -43,8 +43,8 @@ export const SliderQuestion = ({ question, value, onChange }: SliderQuestionProp
         </div>
       </div>
       <div className="flex justify-between mt-2 text-sm text-gray-500">
-        <span>Not sure...</span>
-        <span>I love it!</span>
+        <span>-</span>
+        <span>+</span>
       </div>
     </div>
   );
