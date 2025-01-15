@@ -44,7 +44,6 @@ const Index = () => {
             >
               Improve my holiday
             </Button>
-            </Button>
             <Button
               onClick={() => navigate('/swipe')}
               variant="outline"
