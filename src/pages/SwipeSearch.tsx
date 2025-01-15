@@ -8,31 +8,31 @@ const topics = [
     id: 1,
     title: 'City',
     description: 'Explore vibrant urban landscapes and cultural hotspots',
-    image: '/api/placeholder/600/400'
+    image: '/rome.jpeg'
   },
   {
     id: 2,
     title: 'Activity',
     description: 'Find exciting adventures and experiences',
-    image: '/api/placeholder/600/400'
+    image: '/activity.png'
   },
   {
     id: 3,
     title: 'Summer',
     description: 'Discover perfect summer getaways and beach destinations',
-    image: '/api/placeholder/600/400'
+    image: '/summer.png'
   },
   {
     id: 4,
     title: 'Traveling Solo',
     description: 'Best destinations and tips for solo travelers',
-    image: '/api/placeholder/600/400'
+    image: '/solo.jpeg'
   },
   {
     id: 5,
     title: 'History',
     description: 'Journey through time with historical destinations',
-    image: '/api/placeholder/600/400'
+    image: '/history.png'
   }
 ];
 
